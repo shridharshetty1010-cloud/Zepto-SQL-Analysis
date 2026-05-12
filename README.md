@@ -1,180 +1,100 @@
-Zepto Product Inventory & Pricing Analysis using SQL
-Project Overview
+# Zepto Product Inventory & Pricing Analysis
 
-This project analyzes Zepto’s product inventory dataset using SQL to extract business insights related to pricing, discounts, stock availability, product value, and category-level performance.
+## Project Overview
+This project focuses on analyzing Zepto’s e-commerce product dataset using SQL to derive actionable business insights related to pricing strategy, discounts, inventory availability, and category-level performance.
 
-The goal was to simulate real-world e-commerce analytics by cleaning raw product data and answering practical business questions using SQL queries.
+The objective was to simulate a real-world e-commerce analytics workflow by importing raw product data into PostgreSQL, cleaning and transforming the dataset, and solving business-driven analytical problems using SQL.
 
-Dataset Information
+## Objective
+To analyze product inventory and pricing data to identify key business insights such as:
+- pricing trends across product categories
+- discount strategy effectiveness
+- stock availability and inventory distribution
+- premium product performance
+- revenue estimation opportunities
+- product value benchmarking
 
-Source: Zepto product dataset (CSV)
+## Tools & Technologies
+- PostgreSQL
+- SQL
+- pgAdmin
+- CSV Dataset
+- GitHub
 
-Dataset Size:
+## Dataset Information
+**Source:** Zepto product dataset
 
-3,732 product records
-9 attributes
-Features
-Column Name	Description
-category	Product category
-name	Product name
-mrp	Maximum Retail Price
-discountPercent	Discount offered
-availableQuantity	Available stock quantity
-discountedSellingPrice	Final selling price
-weightInGms	Product weight
-outOfStock	Stock availability
-quantity	Product quantity
-Problem Statement
+**Dataset Size:**
+- 3,700+ product records
+- Multiple product categories
+- Pricing, discount, inventory, and product weight attributes
 
-E-commerce businesses need actionable insights from inventory and pricing data to optimize:
+## Project Workflow
 
-pricing strategy
-inventory management
-promotional campaigns
-stock planning
-product assortment decisions
+### 1. Data Import
+- Imported raw CSV dataset into PostgreSQL using pgAdmin.
+- Structured the dataset into a queryable relational format.
 
-This project uses SQL to solve these business problems.
+### 2. Data Cleaning & Preparation
+Performed preprocessing to improve data quality:
+- identified invalid pricing values
+- handled inconsistent records
+- transformed pricing data into analysis-ready format
+- verified dataset integrity
 
-Data Cleaning Performed
+### 3. Exploratory SQL Analysis
+Performed business-focused analysis including:
 
-Before analysis, the dataset was cleaned to improve accuracy.
+#### Pricing Analysis
+Analyzed:
+- premium product pricing
+- category-level pricing patterns
+- high-MRP product performance
 
-Cleaning Steps :
+#### Discount Analysis
+Evaluated:
+- highest discounted products
+- average category-wise discount percentages
+- discount benchmarking across product groups
 
- Checked total row count
+#### Inventory Analysis
+Tracked:
+- out-of-stock premium products
+- available stock quantities
+- inventory distribution by category
+- estimated inventory weight
 
- Inspected sample records
+#### Revenue Analysis
+Estimated:
+- category-wise potential revenue
+- pricing opportunity insights
 
- Identified null values
-
- Detected duplicate product names
-
- Removed invalid records where price = 0
-
- Converted monetary values from paise to rupees
-
-SQL Analysis Questions Solved
-1. Top 10 Best Value Products
-
-Identified products offering the highest discount percentages.
-
-Business Value: Helps highlight attractive promotional products.
-
-2. High MRP Products Currently Out of Stock
-
-Found expensive products that are unavailable.
-
-Business Value: Helps identify missed revenue opportunities.
-
-3. Estimated Revenue by Category
-
+#### Product Value Analysis
 Calculated:
+- price-per-gram comparisons
+- product value benchmarking
+- segmentation by product size/weight
 
-discountedSellingPrice × quantity
+### 4. SQL Concepts Applied
+Implemented practical SQL techniques including:
+- SELECT
+- WHERE
+- ORDER BY
+- GROUP BY
+- HAVING
+- CASE statements
+- Aggregate functions
+- Subqueries
+- CTEs
+- Filtering logic
+- KPI calculations
+- Data transformation
 
-for each category.
+## Key Outcomes
+- Identified pricing and discount trends across multiple product categories.
+- Highlighted out-of-stock premium products representing potential revenue loss.
+- Benchmarked product value using price-per-weight analysis.
+- Generated category-level business insights from raw e-commerce inventory data.
 
-Business Value: Reveals top-performing categories.
-
-4. Premium Products with Low Discounts
-
-Identified products where:
-
-MRP > ₹500
-Discount < 10%
-
-Business Value: Useful for premium pricing strategy analysis.
-
-5. Categories with Highest Average Discounts
-
-Calculated average discount percentage by category.
-
-Business Value: Shows aggressive promotional categories.
-
-6. Best Price per Gram Products
-
-Computed:
-
-discountedSellingPrice / weightInGms
-
-for products above 100g.
-
-Business Value: Helps compare product value efficiently.
-
-7. Product Segmentation by Weight
-
-Grouped products into:
-
-Low
-Medium
-Bulk
-
-using CASE statements.
-
-Business Value: Useful for inventory classification.
-
-8. Total Inventory Weight by Category
-
-Calculated:
-
-weightInGms × availableQuantity
-
-for each category.
-
-Business Value: Supports warehouse planning.
-
-Key Insights
-
-Based on the analysis:
-
-Significant pricing variation exists across categories.
-Some premium products are unavailable despite high selling potential.
-Discount strategies differ considerably between categories.
-Price-per-weight analysis helps identify genuine value products.
-Inventory distribution varies heavily by category.
-SQL Concepts Used
-
-This project demonstrates practical SQL skills including:
-
-SELECT
-WHERE
-ORDER BY
-GROUP BY
-HAVING
-DISTINCT
-CASE WHEN
-Aggregate Functions
-COUNT()
-SUM()
-AVG()
-Data Cleaning Queries
-DELETE
-UPDATE
-Filtering Logic
-Business KPI Calculations
-SQL (PostgreSQL / pgAdmin)
-
-This project strengthened my understanding of:
-
-SQL-based data cleaning
-exploratory data analysis
-business-focused query writing
-converting raw data into actionable insights
-solving real-world e-commerce analytics problems
-Future Improvements
-
-Potential extensions:
-
-Build interactive Power BI dashboard
-Add category profitability analysis
-Perform demand forecasting
-Create SQL views for reusable reporting
-Add advanced window function analysis
-
-
-Author
-
-Shridhar Shetty
-
-SQL Data Analytics Project
+## Business Impact
+This project demonstrates how SQL can be used to transform raw e-commerce product data into actionable business intelligence for pricing optimization, inventory management, and strategic decision-making.
