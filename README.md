@@ -171,6 +171,8 @@ Add category profitability analysis
 Perform demand forecasting
 Create SQL views for reusable reporting
 Add advanced window function analysis
+
+
 Author
 
 Shridhar Shetty
